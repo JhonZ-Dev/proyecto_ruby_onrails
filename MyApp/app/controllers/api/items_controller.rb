@@ -8,5 +8,9 @@ class Api::ItemsController < ApplicationController
     render json: @items
   end
 
+  def show
+    render json: @item
+  end
+
   end
   
