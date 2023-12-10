@@ -12,5 +12,9 @@ class Api::ItemsController < ApplicationController
     render json: @item
   end
 
+  def new
+    @item = Item.new
+  end
+
   end
   
