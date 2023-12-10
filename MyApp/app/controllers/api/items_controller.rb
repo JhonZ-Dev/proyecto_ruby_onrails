@@ -30,5 +30,13 @@ class Api::ItemsController < ApplicationController
     # Acciones para editar un item
   end
 
+  def update
+    if @item.update(item_params)
+      render json: @item
+    else
+      render json: @item.errors, status: :unprocessable_entity
+    end
+  end
+
   end
   
