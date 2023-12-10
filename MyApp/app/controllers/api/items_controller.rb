@@ -26,5 +26,9 @@ class Api::ItemsController < ApplicationController
     end
   end
 
+  def edit
+    # Acciones para editar un item
+  end
+
   end
   
