@@ -35,8 +35,12 @@ class Api::ItemsController < ApplicationController
       render json: @item
     else
       render json: @item.errors, status: :unprocessable_entity
+    en
+    
+    def destroy
+      @item.destroy
+      head :no_content
     end
-  end
 
   end
   
