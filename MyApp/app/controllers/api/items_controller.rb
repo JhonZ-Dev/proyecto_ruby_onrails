@@ -16,5 +16,15 @@ class Api::ItemsController < ApplicationController
     @item = Item.new
   end
 
+  def create
+    @item = Item.new(item_params)
+
+    if @item.save
+      render json: @item, status: :created, location: api_item_url(@item)
+    else
+      render json: @item.errors, status: :unprocessable_entity
+    end
+  end
+
   end
   
